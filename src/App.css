@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Presto';
+  src: url('fonts/PrestoMediumItalic.woff2') format('woff2'),
+      url('fonts/PrestoMediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Presto';
+  src: url('fonts/PrestoMedium.woff2') format('woff2'),
+      url('fonts/PrestoMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 .App {
   text-align: center;
 }
@@ -34,5 +53,170 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+/* Art work css */
+
+.font-presto{
+  font-family: 'Presto';
+}
+
+.font-courier{
+  font-family: 'Courier Prime', monospace;
+}
+
+.landing-page{
+  background: url("./background/bg-landing-page-min.png") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.shop-section{
+  background: url("./background/bg-shop-page-min.png") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.read-page{
+  background: url("./background/bg-footer-min.png") no-repeat top center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.footer-page{
+  background: url("./background/bg-footer-min.png") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.shop-page{
+  background: url("./background/bg-shop-long-page.png") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.about-page{
+  background: url("./background/bg-about-page.png") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.video-dim{
+  width: 600px;
+}
+
+.bg-gray{
+  background-color: #C0C0BF;
+}
+
+.bg-video-header{
+  background-image: linear-gradient(to right, #1C327D, #3A7FC9);
+}
+
+.mr-sm{
+  margin-right: 2px;
+}
+
+.p-1{
+  padding: 0px 3px !important;
+}
+
+.first-pos{
+  left: 4rem;
+  top: 10rem;
+}
+
+.h-product{
+  height: 35rem;
+}
+
+.h-product2{
+  height: 25rem;
+}
+
+.bg-prd-title{
+  background-color: #C0D1D6;
+}
+
+.bg-prd-price{
+  background-color: #325F60;
+}
+
+.shades::before{
+  content: "";
+  position: absolute;
+  background-color: #111827;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 2px;
+  left: -2px;
+}
+
+.gray-shades::before{
+  content: "";
+  position: absolute;
+  background-color: #2e2e2e;
+  width: 100%;
+  height: 80%;
+  z-index: -1;
+  top: 10px;
+  left: -2px;
+}
+
+.bg-wheat{
+  background-color: white;
+}
+
+.text-shadow{
+  text-shadow: 4px 4px 1px #000;
+}
+
+.text-shadow-lg{
+  text-shadow: 6px 6px 1px #000;
+}
+
+.text-sea{
+  color: #1C4559;
+}
+
+.modal-width{
+  width: 40% !important;
+}
+
+.modal-img{
+  height: 300px;
+}
+
+a:hover{
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width:990px) {
+  .h-product{
+    height: 20rem;
+  }
+  
+  .h-product2{
+    height: 10rem;
+  }
+  
+  .modal-width{
+    width: 90% !important;
   }
 }
