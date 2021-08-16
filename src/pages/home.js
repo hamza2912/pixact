@@ -8,7 +8,25 @@ import Footer from '../components/footer';
 
 function Home() {
 
-//   const [username, setusername] = React.useState(null);
+  const [toSend, setToSend] = React.useState({
+    email: '',
+    number: '',
+  });
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
+
+  const onSubmit = (e) => {
+    console.log(toSend.email, toSend.number);
+  };
+
+  // const [toSend, setToSend] = useState({
+  //   from_name: '',
+  //   to_name: '',
+  //   message: '',
+  //   reply_to: '',
+  // });
 
 //   React.useEffect(() => {
 //     setusername(localStorage.getItem('name'));
@@ -31,7 +49,7 @@ function Home() {
             {/* minimized video window */}
             <div id='drag-w' className='absolute bottom-0 left-0 px-3 py-1 w-1/6 bg-video-header border-2 shadow-lg cursor-pointer hidden'>
               <div className='flex flex-row items-center'>
-                <img className='w-5 h-auto' src="images/icons/search-files.PNG" alt="Search Files Icon 98" />
+                <img className='w-5 h-auto' src="images/icons/searchFiles.png" alt="Search Files Icon 98" />
                 <p className='ml-2 font-presto italic text-xs text-white'>New York City: 2001</p>
               </div>
             </div>
@@ -41,7 +59,7 @@ function Home() {
               <div className='w-full pb-5 z-10 bg-gray text-white' id="mydivheader">
                 <div className='w-full px-3 py-1 bg-video-header flex flex-row items-center justify-between'>
                   <div className='flex flex-row items-center'>
-                  <img className='w-5 h-auto' src="images/icons/search-files.PNG" alt="Search Files Icon 98" />
+                  <img className='w-5 h-auto' src="images/icons/searchFiles.png" alt="Search Files Icon 98" />
                   <p className='ml-2 font-presto italic text-xs'>New York City: 2001</p>
                   </div>
                   <div className='flex flex-row'>
@@ -59,7 +77,7 @@ function Home() {
             <div id='mydiv' className='w-full border-2 border-white lg:hidden'>
               <div className='w-full px-5 py-1 bg-video-header flex flex-row items-center justify-between'>
                   <div className='flex flex-row items-center'>
-                  <img className='w-5 h-auto' src="images/icons/search-files.PNG" alt="Search Files Icon 98" />
+                  <img className='w-5 h-auto' src="images/icons/searchFiles.png" alt="Search Files Icon 98" />
                   <p className='ml-2 font-presto italic text-xs'>New York City: 2001</p>
                   </div>
                   <div className='flex flex-row'>
@@ -77,24 +95,39 @@ function Home() {
 
               </div>
               <div className='lg:w-1/2 w-full lg:pl-12 mt-2 lg:mt-0'>
-                <p className='lg:text-3xl text-xl text-white font-courier lg:max-w-2xl text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p className='lg:text-3xl text-xl text-white font-courier lg:max-w-2xl text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 
                 {/* fixed sign up form */}
                 <div id='popup' className='mt-5'>
-                  <div className='w-96 border-t-2 border-l-2 border-r-2 shadow-lg pb-5 z-10 bg-gray text-white'>
+                  <div className='lg:w-4/5 w-full border-t-2 border-l-2 border-r-2 shadow-lg z-10 bg-gray text-white'>
                     <div className='w-full px-3 py-1 bg-video-header flex flex-row items-center justify-between'>
                       <div className='flex flex-row items-center'>
                       <img className='w-5 h-auto' src="images/icons/messege.png" alt="Search Files Icon 98" />
                       <p className='font-presto italic font-normal ml-2 text-xs'>New Messeges: (1)</p>
                       </div>
                       <div className='flex flex-row'>
-                        {/* <i className="fas fa-minus text-black z-50 p-1 bg-gray border text-sm shadow-md mr-sm cursor-pointer minimize-div"></i> */}
-                        <i className="fas fa-times text-black z-50 p-1 bg-gray border text-sm shadow-md cursor-pointer close-div"></i>
+                        <i className="fas fa-times text-black z-50 p-1 bg-gray border text-sm shadow-md cursor-pointer"></i>
                       </div>
                     </div>
                   </div>
-                  <div className='bg-gray border-b-2 border-l-2 border-r-2 shadow-lg w-96 h-56 p-10'>
-                    <button id='submit-popup' className='p-2 bg-red-200'>Submit</button>
+                  <div className='bg-gray border-l-2 border-r-2 shadow-lg lg:w-4/5 w-full h-96 px-10 pb-3 bg-signup relative flex justify-center items-end'>
+                    <div className='lg:w-2/3 w-full'>
+                      <form className='w-full' action="">
+                        <div className='flex flex-row relative w-full'>
+                          <img className='w-7 h-6 mr-1' src="images/icons/email.png" alt="" />
+                          <label className='absolute -top-2 left-10 bg-white font-medium font-presto px-1 text-xs' htmlFor="email">Email</label>
+                          <input className='w-full bg-gray border border-black px-2 focus:outline-none' type="text"  name='email' value={toSend.email} onChange={handleChange} />
+                        </div>
+                        <div className='flex flex-row relative w-full mt-4'>
+                          <img className='w-7 h-6 mr-1' src="images/icons/phone.png" alt="" />
+                          <label className='absolute -top-2 left-10 bg-white font-medium font-presto px-1 text-xs' htmlFor="number">Phone Number</label>
+                          <input className='w-full bg-gray border border-black px-2 focus:outline-none' type="text"  name='number' value={toSend.number} onChange={handleChange} />
+                        </div>
+                      </form>
+                      <div className='w-full flex justify-end'>
+                        <button id='submit-popup' className='px-2 bg-white text-black text-xs font-medium ml-8' onClick={onSubmit}>Submit</ button>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

@@ -10,7 +10,7 @@ function Modal(props) {
                 <div className='w-full pb-3 z-10 bg-gray text-white'>
                     <div className='w-full px-3 py-1 bg-video-header flex flex-row items-center justify-between'>
                         <div className='flex flex-row items-center'>
-                        <img className='w-5 h-auto' src="images/icons/search-files.PNG" alt="Search Files Icon 98" />
+                        <img className='w-5 h-auto' src="images/icons/searchFiles.png" alt="Search Files Icon 98" />
                         <p className='ml-2 font-presto italic text-xs'>Glitch Artwork</p>
                         </div>
                         <div className='flex flex-row'>

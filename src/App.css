@@ -115,12 +115,25 @@
   background-size: cover;
 }
 
+.bg-signup{
+  background: url("./background/bg-signup.png") no-repeat top center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .video-dim{
   width: 600px;
 }
 
 .bg-gray{
   background-color: #C0C0BF;
+}
+
+.bg-gray-2{
+  background-color: #d1ceca;
+
 }
 
 .bg-video-header{

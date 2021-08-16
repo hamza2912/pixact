@@ -12,7 +12,7 @@ function Header() {
                 </div>
                 <div className="w-full flex flex-row justify-between border-t-2 border-b-2 border-black py-2 px-4 font-presto">
                     <div className="w-1/3">
-                        <p>Brands Sogan here</p>
+                        <p>Brands' Slogan here</p>
                     </div>
                     <div className="lg:w-1/5 w-1/2 flex flex-row justify-around items-center font-semibold font-presto">
                         <a href="/about">About</a>
