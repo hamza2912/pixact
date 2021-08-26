@@ -234,9 +234,9 @@
   width: 530px;
 }
 
-/* .about-page p{
-  color: white !important;
-} */
+.about-page p{
+  color: white;
+}
 
 .h-artist{
   height: 600px;

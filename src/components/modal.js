@@ -20,7 +20,7 @@ function Modal(props) {
                 </div>
             </div>
             <div className='w-full h-auto border-2 border-white bg-gray'>
-                <img className='w-full modal-img' src={props.src}  alt="Modal Work" />
+                <img className='w-full h-auto' src={props.src}  alt="Modal Work" />
                 <div className='w-full lg:pl-10 pl-5 pb-6'>
                     <h2 className='font-presto text-5xl text-black'>{props.title}</h2>
                     <ul className='lg:pl-10 pl-5 mt-2 mb-10 font-presto text-sm'>
