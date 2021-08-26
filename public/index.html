@@ -83,7 +83,9 @@
           $(this).hide();
         }));
         $("#submit-popup").click((function(){
-          $("#popup").hide();
+          $(this).hide();
+          $("#input-details").hide();
+          $("#recieved").fadeIn();
         }));
         $(".artwork1").click((function(){
           $("#work1").modal().modal("show");
@@ -91,10 +93,30 @@
         $(".artwork3").click((function(){
           $("#work3").modal().modal("show");
         }));
+        $(".artwork2").click((function(){
+          $("#work2").modal().modal("show");
+        }));
+        $(".artwork4").click((function(){
+          $("#work4").modal().modal("show");
+        }));
+        $(".artwork5").click((function(){
+          $("#work5").modal().modal("show");
+        }));
         $(".close-modal").click((function(){
           $(".ui.modal").modal("hide");
           $(".main_body").append(i);
         }));
+        // var message = "";
+        // $("#submit-popup").on("click", function() {
+        //     message = $("#input-details").serialize();
+        //     $.ajax({
+        //         url: "//formspree.io/f/xqkwggyv", 
+        //         method: "POST",
+        //         data: {message: message},
+        //         dataType: "json"
+        //     });
+        //     return false;
+        // });
         dragElement(document.getElementById("mydiv"));
       }));
     </script>

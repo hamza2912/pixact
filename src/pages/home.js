@@ -1,10 +1,8 @@
 import React from 'react';
 import Header from '../components/header';
-import Work from '../components/work';
-import Work_tags from '../components/work_tags';
-import Add_button from '../components/add_button';
-import Modal from '../components/modal';
+import Artwork_modals from '../components/artwork_modals';
 import Footer from '../components/footer';
+import Available_artworks from '../components/available_artworks';
 
 function Home() {
 
@@ -17,32 +15,19 @@ function Home() {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = (e) => {
-    console.log(toSend.email, toSend.number);
-  };
-
-  // const [toSend, setToSend] = useState({
-  //   from_name: '',
-  //   to_name: '',
-  //   message: '',
-  //   reply_to: '',
-  // });
-
-//   React.useEffect(() => {
-//     setusername(localStorage.getItem('name'));
-//   }, []);
+  // const onSubmit = (e) => {
+  //   console.log(toSend.email, toSend.number);
+  // };
 
     return (
       
       <div>
 
-        <Modal work_id='work3' src='images/artwork/artwork3.jpeg' title='Artwork 3' artist='Matthew Bakkom' date='25/12/1997' glitched='25/12/2012' location='World Trade Centre, New York' url='/'  />
-
-        <Modal work_id='work1' src='images/artwork/artwork1.jpeg' title='Artwork 1' artist='Matthew Bakkom' date='25/12/1997' glitched='25/12/2012' location='World Trade Centre, New York' url='/'  />
+        <Artwork_modals />
 
         <Header />
 
-        <div className='main_body'>
+        <div className='main_body bg-home'>
           {/* landing page */}
           <div className='w-full lg:h-screen lg:pt-40 pt-32 lg:px-16 px-5 landing-page'>
 
@@ -68,7 +53,8 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <video className='w-full h-auto border-2 border-black' controls>
+              <video className='w-full h-auto border-2 border-black' controls poster=
+                "video/video_header.PNG">
                 <source src="video/video.mp4" type="video/mp4"/>
               </video>
             </div>
@@ -84,7 +70,8 @@ function Home() {
                     <i className="fas fa-times text-black z-50 p-1 bg-gray border text-sm shadow-md cursor-pointer close-div"></i>
                   </div>
               </div>
-              <video className='w-full h-auto border-2 border-black' controls>
+              <video className='w-full h-auto border-2 border-black' controls poster=
+                "video/video_header.PNG">
                 <source src="video/video.mp4" type="video/mp4"/>
               </video>
             </div>
@@ -99,7 +86,7 @@ function Home() {
 
                 {/* fixed sign up form */}
                 <div id='popup' className='mt-5'>
-                  <div className='lg:w-4/5 w-full border-t-2 border-l-2 border-r-2 shadow-lg z-10 bg-gray text-white'>
+                  <div className='w-signup border-t-2 border-l-2 border-r-2 shadow-lg z-10 bg-gray text-white'>
                     <div className='w-full px-3 py-1 bg-video-header flex flex-row items-center justify-between'>
                       <div className='flex flex-row items-center'>
                       <img className='w-5 h-auto' src="images/icons/messege.png" alt="Search Files Icon 98" />
@@ -110,9 +97,9 @@ function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className='bg-gray border-l-2 border-r-2 shadow-lg lg:w-4/5 w-full h-96 px-10 pb-3 bg-signup relative flex justify-center items-end'>
-                    <div className='lg:w-2/3 w-full'>
-                      <form className='w-full' action="">
+                  <div className='bg-gray border-l-2 border-r-2 shadow-lg w-signup h-96 px-10 pb-3 bg-signup relative flex justify-center items-end'>
+                    <div className='w-signup'>
+                      <form id='input-details' className='w-full' method="POST">
                         <div className='flex flex-row relative w-full'>
                           <img className='w-7 h-6 mr-1' src="images/icons/email.png" alt="" />
                           <label className='absolute -top-2 left-10 bg-white font-medium font-presto px-1 text-xs' htmlFor="email">Email</label>
@@ -123,9 +110,13 @@ function Home() {
                           <label className='absolute -top-2 left-10 bg-white font-medium font-presto px-1 text-xs' htmlFor="number">Phone Number</label>
                           <input className='w-full bg-gray border border-black px-2 focus:outline-none' type="text"  name='number' value={toSend.number} onChange={handleChange} />
                         </div>
+                        {/* <button type="submit">Send</button> */}
                       </form>
+                      <div id='recieved' className='w-full text-center hidden mb-4'>
+                        <p className='font-presto italic text-lg'>Thanks, you’re on the list</p>
+                      </div>
                       <div className='w-full flex justify-end'>
-                        <button id='submit-popup' className='px-2 bg-white text-black text-xs font-medium ml-8' onClick={onSubmit}>Submit</ button>
+                        <button id='submit-popup' className='px-2 bg-white text-black text-xs font-medium ml-8'>Submit</ button>
                       </div>
                     </div>
                   </div>
@@ -136,36 +127,27 @@ function Home() {
             </div>
           </div>
           {/* our collection */}
-          <div className='w-full shop-section flex lg:flex-row flex-col lg:p-16 p-5 bg-gray-200'>
-            <div className='lg:w-2/5 w-full'>
-              <h2 className='text-6xl text-black font-presto text-white text-shadow-lg mb-16'>Available <br/> Works</h2>
-              <Work imgClass="w-full h-product artwork3" src="images/artwork/artwork3.jpeg"/>
-              <div className='w-full flex flex-col items-center lg:mt-12 mt-6'>
-                <Work_tags title="Art Piece # 1" price="$3k" />
-                <div className='mt-8'>
-                  <Add_button  url="/" />
-                </div>
-              </div>
-            </div>
-            <div className='lg:w-3/5 w-full lg:pt-16 pt-8 lg:pl-10 pl-0'>
-              <Work imgClass="w-full h-product2 artwork1" src="images/artwork/artwork1.jpeg"/>
-              <div className='w-full flex flex-col items-center lg:mt-12 mt-6'>
-                <Work_tags title="Art Piece # 1" price="$3k" />
-                <div className='mt-8'>
-                  <Add_button  url="/" />
-                </div>
-              </div>
-            </div>
+          <div className='w-full lg:p-16 p-5 mt-12'>
+            <Available_artworks />
           </div>
-          {/* instagram */}
+          {/* read more */}
           <div className='w-full py-16 read-page'>
-            <h2 className='text-right text-5xl text-black font-presto italic text-white text-shadow-lg lg:mr-32 mr-10'>Read More on M.Bakkom...</h2>
+            <h2 className='text-right text-5xl text-black font-presto italic text-white text-shadow-lg lg:mr-32 mr-10'>More on M. Bakkom...</h2>
             <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 p-6 border-2 border-white my-12'>
-              <div className='w-full lg:h-96 h-56 bg-gray border-2 border-black cursor-pointer'>
+              <div className='w-full lg:h-96 h-56 bg-gray border-2 border-black flex justify-center items-center cursor-pointer'>
+                <a className='w-4/5' href="https://www.nytimes.com/2001/07/30/nyregion/a-debut-in-queens-nighthawks-at-the-museum.html?searchResultPosition=7" rel="noreferrer" target="_blank">
+                  <img src="images/logo/new_york_times_logo.png" alt="New York Times" />
+                </a>              
               </div>
-              <div className='w-full lg:h-96 h-56 bg-gray border-2 border-black cursor-pointer'>
+              <div className='w-full lg:h-96 h-56 bg-gray border-2 border-black flex justify-center items-center cursor-pointer'>
+                <a className='w-4/5' href="https://www.startribune.com/artist-matthew-bakkom-marks-minneapolis-homecoming-with-diy-exhibit-of-wwi-photography/500151282/" rel="noreferrer" target="_blank">
+                  <img src="images/logo/star_tribune_logo.png" alt="New York Times" />
+                </a>
               </div>
-              <div className='w-full lg:h-96 h-56 bg-gray border-2 border-black cursor-pointer'>
+              <div className='w-full lg:h-96 h-56 bg-gray border-2 border-black flex justify-center items-center cursor-pointer'>
+                <a className='w-1/4' href="https://madparis.fr/francais/bibliotheque/expositions/expositions-terminees/presentation-2904" rel="noreferrer" target="_blank">
+                  <img src="images/logo/mad_paris_logo.png" alt="New York Times" />
+                </a>
               </div>
             </div>
           </div>
@@ -179,3 +161,70 @@ function Home() {
   }
   
 export default Home;
+
+
+
+
+
+
+
+
+
+
+
+{/* <Modal work_id='work1' src='images/artwork/artwork1.jpg' title='MAR.18.2021 19:15 EST' artist='Matthew Bakkom' date='25/12/1997' glitched='25/12/2012' location='World Trade Centre, New York' url='https://opensea.io/'  />
+
+<Modal work_id='work2' src='images/artwork/artwork2.jpg' title='MAR.18.2021 19:17 EST' artist='Matthew Bakkom' date='25/12/1997' glitched='25/12/2012' location='World Trade Centre, New York' url='https://opensea.io/'  />
+
+<Modal work_id='work3' src='images/artwork/artwork3.jpg' title='MAR.18.2021 19:19 EST' artist='Matthew Bakkom' date='25/12/1997' glitched='25/12/2012' location='World Trade Centre, New York' url='https://opensea.io/'  />
+
+<Modal work_id='work4' src='images/artwork/artwork4.jpg' title='MAR.18.2021 19:21 EST' artist='Matthew Bakkom' date='25/12/1997' glitched='25/12/2012' location='World Trade Centre, New York' url='https://opensea.io/'  />
+
+<Modal work_id='work5' src='images/artwork/artwork5.jpg' title='MAR.18.2021 19:22 EST' artist='Matthew Bakkom' date='25/12/1997' glitched='25/12/2012' location='World Trade Centre, New York' url='https://opensea.io/'  /> */}
+
+
+{/* <h2 className='text-center text-6xl text-white font-presto text-shadow-lg font-bold'>Available <br />Works</h2>
+            <div className='grid lg:grid-cols-2 grid-cols-1 gap-x-40 gap-y-12 lg:mt-24 mt-12'>
+              <div className='available-work lg:col-span-2 lg:w-1/2 w-full mx-auto'>
+                <Work imgDim="w-full h-product artwork1" src="images/artwork/artwork1.jpg"/>
+                <div className='w-full flex flex-col items-center lg:mt-12 mt-6'>
+                  <Work_tags url='https://opensea.io/' title="MAR.18.2021 19:15 EST" price="$3k" />
+                </div>
+              </div>
+              <div className='available-work'>
+                <Work imgDim="w-full h-product artwork2" src="images/artwork/artwork2.jpg"/>
+                <div className='w-full flex flex-col items-center lg:mt-12 mt-6'>
+                  <Work_tags url='https://opensea.io/' title="MAR.18.2021 19:17 EST" price="$3k" />
+                </div>
+              </div>
+              <div className='available-work'>
+                <Work imgDim="w-full h-product artwork3" src="images/artwork/artwork3.jpg"/>
+                <div className='w-full flex flex-col items-center lg:mt-12 mt-6'>
+                  <Work_tags url='https://opensea.io/' title="MAR.18.2021 19:19 EST" price="$3k" />
+                </div>
+              </div>
+                <div className='available-work'>
+                  <Work imgDim="w-full h-product artwork4" src="images/artwork/artwork4.jpg"/>
+                  <div className='w-full flex flex-col items-center lg:mt-12 mt-6'>
+                    <Work_tags url='https://opensea.io/' title="MAR.18.2021 19:21 EST" price="$3k" />
+                  </div>
+                </div>
+                <div className='available-work'>
+                  <Work imgDim="w-full h-product artwork5" src="images/artwork/artwork5.jpg"/>
+                  <div className='w-full flex flex-col items-center lg:mt-12 mt-6'>
+                    <Work_tags url='https://opensea.io/' title="MAR.18.2021 19:22 EST" price="$3k" />
+                  </div>
+                </div>
+            </div> */}
+
+
+  // const [toSend, setToSend] = useState({
+  //   from_name: '',
+  //   to_name: '',
+  //   message: '',
+  //   reply_to: '',
+  // });
+
+//   React.useEffect(() => {
+//     setusername(localStorage.getItem('name'));
+//   }, []);

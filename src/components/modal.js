@@ -6,7 +6,7 @@ function Modal(props) {
     return (
       
         <div id={props.work_id} className="ui modal modal-width">
-            <div className='w-full border-t-2 border-l-2 border-r-2 shadow-lg pb-5 z-10 bg-gray text-white'>
+            <div className='w-full border-t-2 border-l-2 border-r-2 shadow-lg pb-0 z-10 bg-gray text-white'>
                 <div className='w-full pb-3 z-10 bg-gray text-white'>
                     <div className='w-full px-3 py-1 bg-video-header flex flex-row items-center justify-between'>
                         <div className='flex flex-row items-center'>
@@ -61,10 +61,10 @@ function Modal(props) {
                             </div>
                         </li>
                     </ul>
-                    <div className='w-full lg:px-16 px-3 grid grid-cols-2 gap-4'>
-                    <div className='w-48 flex flex-row font-semibold z-50 relative shades'>
+                    <div className='w-full lg:px-16 px-3 grid grid-cols-2 lg:gap-8 gap-4'>
+                    <div className='flex flex-row font-semibold z-50 relative shades'>
                         <div className='w-full px-2 py-4 bg-gray border-2 border-black flex justify-center items-center'>
-                            <a href="/shop" className='cursor-pointer font-presto italic'>View More</a>
+                            <a href="/shop" className='cursor-pointer font-presto'>View More</a>
                         </div>
                     </div>
                         <Add_button url={props.url} />

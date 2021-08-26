@@ -67,13 +67,22 @@
   font-family: 'Courier Prime', monospace;
 }
 
-.landing-page{
+.bg-home{
+  background: url("./background/bg-home.png") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+/* .landing-page{
   background: url("./background/bg-landing-page-min.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 .shop-section{
   background: url("./background/bg-shop-page-min.png") no-repeat center center; 
@@ -83,13 +92,13 @@
   background-size: cover;
 }
 
-.read-page{
+/* .read-page{
   background: url("./background/bg-footer-min.png") no-repeat top center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 .footer-page{
   background: url("./background/bg-footer-min.png") no-repeat center center; 
@@ -125,6 +134,12 @@
 
 .video-dim{
   width: 600px;
+}
+
+@media screen and (max-width:1260px) {
+  .video-dim{
+    width: 450px;
+  }
 }
 
 .bg-gray{
@@ -212,7 +227,19 @@
 }
 
 .modal-img{
-  height: 300px;
+  height: 400px;
+}
+
+.w-signup{
+  width: 530px;
+}
+
+/* .about-page p{
+  color: white !important;
+} */
+
+.h-artist{
+  height: 600px;
 }
 
 a:hover{
@@ -231,5 +258,17 @@ a:hover{
   
   .modal-width{
     width: 90% !important;
+  }
+
+  .modal-img{
+    height: 300px;
+  }
+
+  .w-signup{
+    width: 100%;
+  }
+
+  .h-artist{
+    height: 600px;
   }
 }
