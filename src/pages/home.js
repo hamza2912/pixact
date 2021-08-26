@@ -127,7 +127,7 @@ function Home() {
             </div>
           </div>
           {/* our collection */}
-          <div className='w-full lg:p-16 p-5 mt-12'>
+          <div className='w-full lg:py-16 lg:px-32 px-5 py-5 mt-12'>
             <Available_artworks />
           </div>
           {/* read more */}

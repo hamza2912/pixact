@@ -18,10 +18,11 @@ function Footer() {
                 </div>
             </div>
             <div className="w-full flex justify-center pb-12 border-b-2 border-white">
-                <div className="lg:w-1/4 w-1/2 flex flex-row justify-between items-center mt-10">
-                    <a href="/"><img className="w-8 h-auto" src="images/icons/facebook.png" alt="Facebook Icon" /></a>
+                <div className="lg:w-1/6 w-1/2 flex flex-row justify-between items-center mt-10">
+                    {/* <a href="/"><img className="w-8 h-auto" src="images/icons/facebook.png" alt="Facebook Icon" /></a> */}
                     <a href="https://www.instagram.com/archiveninetyone/" rel="noreferrer" target="_blank"><img className="w-8 h-auto" src="images/icons/instagram.png" alt="Instagram Icon" /></a>
-                    <a href="/"><img className="w-8 h-auto" src="images/icons/Twitter.png" alt="Twitter Icon" /></a>
+                    <a href="https://discord.com/" rel="noreferrer" target="_blank"><img className="w-10 h-auto" src="images/icons/discord.png" alt="Discord Icon" /></a>
+                    <a href="https://twitter.com/archive_91_" rel="noreferrer" target="_blank"><img className="w-8 h-auto" src="images/icons/Twitter.png" alt="Twitter Icon" /></a>
                 </div>
             </div>
             <div className="w-full flex justify-center lg:pt-24 pt-16 pb-8">
