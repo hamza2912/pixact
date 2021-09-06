@@ -13,7 +13,8 @@ function Footer() {
                 <div className="w-full flex flex-row justify-between border-t-2 border-b-2 border-black py-2 lg:px-32 px-5 font-presto font-semibold">
                     <a href="/about">About</a>
                     <a href="/shop">Shop</a>
-                    <a href="https://www.instagram.com/archiveninetyone/" rel="noreferrer" target="_blank">Instagram</a>
+                    <a href="/digital">Digital Art</a>
+                    {/* <a href="https://www.instagram.com/archiveninetyone/" rel="noreferrer" target="_blank">Instagram</a> */}
                     <a href="https://opensea.io/" rel="noreferrer" target="_blank">OpenSea</a>
                 </div>
             </div>

@@ -22,11 +22,11 @@ function About() {
               <div className='mt-5'>
                 <p className='text-base font-courier mt-2'>Just twenty years shy of when he had originally intended, Bakkom decided to publish his work.</p>
               </div>
-              <div className='mt-5'>
+              {/* <div className='mt-5'>
                 <p className='text-base font-courier mt-2'>This is the story of Smart World Technology, presented by Archive 91. Photographed by Matthew Bakkom.<br />1 World Trade Center, New York, NY.<br />February 2001.</p>
-              </div>
+              </div> */}
               <div className='mt-5'>
-                <p className='text-base font-courier mt-2'>In the fall of 2000, Bakkom, along with a handful of other up-and-coming NYC artists, were selected to join the “Lower Manhattan Worldviews Studio Program” which provided space and community for local creatives on the 91st floor of 1 World Trade Center.</p>
+                <p className='text-base font-courier mt-2'>In the fall of 2000, Bakkom, along with a handful of other up-and-coming NYC artists, were selected to join the <a className='text-blue-400' href="https://lmcc.net/about/history/" rel="noreferrer" target="_blank">Lower Manhattan Worldviews Studio Program</a> which provided space and community for local creatives on the 91st floor of 1 World Trade Center.</p>
               </div>
               <div className='mt-5'>
                 <p className='text-base font-courier mt-2'>Despite the fact that the provided studio space was unfinished and unfurnished, the artists were ecstatic. In the early 2000s, The World Trade Center was viewed as the capitalist powerhouse of the world, the views were astounding and the rent was free.</p>
@@ -45,7 +45,7 @@ function About() {
                 <p className='text-base font-courier mt-2'>Down the hall, however, things weren't as sweet. </p>
               </div>
               <div className='mt-5'>
-                <p className='text-base font-courier mt-2'>Two Japanese holding companies went bankrupt and abandoned their offices during Bakkom’s first month working at the WTC.  The final office that shared the West Wing on the 91st floor belonged to a company named Smart World Technologies.  Their office also sat silent.<br />Until February 7, 2001.</p>
+                <p className='text-base font-courier mt-2'>Two Japanese holding companies went bankrupt and abandoned their offices during Bakkom’s first month working at the <a className='text-blue-400' href="https://en.wikipedia.org/wiki/World_Trade_Center_(1973%25E2%2580%25932001)" rel="noreferrer" target="_blank">WTC</a>.  The final office that shared the West Wing on the 91st floor belonged to a company named Smart World Technologies.  Their office also sat silent.<br />Until February 7, 2001.</p>
               </div>
               <div className='mt-5'>
                 <p className='text-base font-courier mt-2'>Early that morning,  Bakkom arrived on the 91st floor and noticed the door to their lone remaining neighbour ajar. He stepped in, only to be met by a middle-aged man in formal business attire with heavy bags shadowing his eyes.</p>
@@ -54,7 +54,7 @@ function About() {
                 <p className='text-base font-courier mt-2'>He introduced himself as an office manager at Smart World Technologies --  He had been coming into work for months now without pay</p>
               </div>
               <div className='mt-5'>
-                <p className='text-base font-courier mt-2'>Smart World Technologies, like many companies at the burst of the dot-com bubble, was sinking deep into bankruptcy.</p>
+                <p className='text-base font-courier mt-2'>Smart World Technologies, like many companies at the burst of the <a className='text-blue-400' href="https://searchcio.techtarget.com/definition/dot-com-bubble#_msocom_1" rel="noreferrer" target="_blank">dot-com bubble</a>, was sinking deep into bankruptcy.</p>
               </div>
               <div className='mt-5'>
                 <p className='text-base font-courier mt-2'>Without any hope of standard compensation, the manager had begun the process of turning what was left of the office into a type of rummage sale.</p>
@@ -113,8 +113,8 @@ function About() {
         </div>
 
         <div className='w-full lg:p-16 p-5 about-page'>
-          <p className='text-center text-base text-white font-presto italic'>About the Artist</p>
-          <h2 className='text-center text-6xl text-white font-presto text-shadow-lg font-bold'>Matthew <br />Bakkom</h2>
+          {/* <p className='text-center text-base text-white font-presto italic'>About the Artist</p> */}
+          <h2 className='text-center text-6xl text-white font-presto text-shadow-lg font-bold'>About the <br />Artist</h2>
           <div className='grid lg:grid-cols-2 grid-cols-1 gap-8 lg:mt-12 mt-6 items-center'>
             <div className='archive-content flex flex-col justify-center'>
               <div className='mt-10'>

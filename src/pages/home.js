@@ -30,6 +30,8 @@ function Home() {
         <div className='main_body bg-home'>
           {/* landing page */}
           <div className='w-full lg:h-screen lg:pt-40 pt-32 lg:px-16 px-5 landing-page'>
+          {/* <div className='w-full lg:h-screen lg:pt-20 pt-32 lg:px-16 px-5 landing-page'> */}
+
 
             {/* minimized video window */}
             <div id='drag-w' className='absolute bottom-0 left-0 px-3 py-1 w-1/6 bg-video-header border-2 shadow-lg cursor-pointer hidden'>
@@ -77,12 +79,13 @@ function Home() {
             </div>
 
             {/* landing page content */}
-            <div className='w-full flex lg:flex-row flex-col'>
+            <div className='w-full flex lg:flex-row flex-col h-full'>
               <div className='lg:w-1/2 w-full'>
 
               </div>
               <div className='lg:w-1/2 w-full lg:pl-12 mt-2 lg:mt-0'>
-                <p className='lg:text-3xl text-xl text-white font-courier lg:max-w-2xl text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              {/* <div className='lg:w-full w-full h-full flex justify-center items-center mt-2 lg:mt-0'> */}
+                <p className='lg:text-3xl text-xl text-white font-courier lg:max-w-2xl text-justify'>Moments in time met with computer error, glitched into an entirely new phenomenon — all tangible via NFT. Archive91 displays the raw truth of the dot com bubble collapse while reminding us of our human tendency to repeat the past.</p>
 
                 {/* fixed sign up form */}
                 <div id='popup' className='mt-5'>
@@ -99,6 +102,10 @@ function Home() {
                   </div>
                   <div className='bg-gray border-l-2 border-r-2 shadow-lg w-signup h-96 px-10 pb-3 bg-signup relative flex justify-center items-end'>
                     <div className='w-signup'>
+                      <div className='mb-2'>
+                        <h2 className='font-sarina lg:text-2xl text-xl text-center'>for premier access to</h2>
+                        <p className='font-courier text-center lg:text-2xl text-lg tracking-widest text-gray-600'>Archive 91's Limited Edition<br className='hidden lg:block' /> NFT Release</p>
+                      </div>
                       <form id='input-details' className='w-full' method="POST">
                         <div className='flex flex-row relative w-full'>
                           <img className='w-7 h-6 mr-1' src="images/icons/email.png" alt="" />
@@ -110,7 +117,7 @@ function Home() {
                           <label className='absolute -top-2 left-10 bg-white font-medium font-presto px-1 text-xs' htmlFor="number">Phone Number</label>
                           <input className='w-full bg-gray border border-black px-2 focus:outline-none' type="text"  name='number' value={toSend.number} onChange={handleChange} />
                         </div>
-                        {/* <button type="submit">Send</button> */}
+                       
                       </form>
                       <div id='recieved' className='w-full text-center hidden mb-4'>
                         <p className='font-presto italic text-lg'>Thanks, you’re on the list</p>
@@ -121,6 +128,7 @@ function Home() {
                     </div>
                   </div>
                 </div>
+                 {/* <button type="submit">Send</button> */}
 
               </div>
 

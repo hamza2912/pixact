@@ -10,11 +10,11 @@ function Work_item(props) {
         <div className='work_item flex flex-col'>
             <Work imgDim={props.imgDim} src={props.src} />
             <div className='flex lg:flex-row flex-col items-center'>
-              <div className='w-3/5 flex flex-col mt-6'>
+              <div className='w-3/5 flex flex-col items-center lg:items-start mt-6'>
                 <Work_tags url={props.url} title={props.title} price={props.price} />
                 {/* <p className='text-white text-base font-presto italic mt-2'>{props.artist}</p> */}
               </div>
-              <div className='w-2/5 flex flex-col mt-6 items-end'>
+              <div className='lg:w-2/5 w-full flex flex-col mt-6 lg:items-end items-center'>
                 <p className='text-white text-base font-presto italic mt-2'>{props.artist}</p>
               </div>
             </div>

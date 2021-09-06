@@ -10,13 +10,14 @@ function Header() {
                         <a href="/"><img className="w-24 h-auto" src="images/logo/archive-91.png" alt="Archive 91 Logo"/></a>
                     </div>
                 </div>
-                <div className="w-full flex flex-row justify-between border-t-2 border-b-2 border-black py-2 px-4 font-presto">
-                    <div className="w-1/3">
+                <div className="w-full flex flex-row justify-end border-t-2 border-b-2 border-black py-2 px-4 font-presto">
+                    {/* <div className="w-1/3">
                         <p>Brands' Slogan here</p>
-                    </div>
-                    <div className="lg:w-1/5 w-1/2 flex flex-row justify-around items-center font-semibold font-presto">
+                    </div> */}
+                    <div className="lg:w-1/4 w-4/5 flex flex-row justify-around items-center font-semibold font-presto">
                         <a href="/about">About</a>
-                        <a href="/shop">Shop</a>
+                        <a href="/digital">Digital Art</a>
+                        <a href="/shop">Auction</a>
                     </div>
                 </div>
             </nav>

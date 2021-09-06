@@ -5,7 +5,7 @@ function Work_tags(props) {
 
     return (
         
-        <div className="lg:w-72 w-64 flex flex-row font-semibold z-50 relative shades">
+        <div className="lg:w-80 w-72 flex flex-row font-semibold z-50 relative shades">
             <div className="w-1/2 px-2 py-3 bg-prd-title flex justify-center items-center">
                 <p className="font-presto text-center">{props.title}</p>
             </div>
