@@ -1,10 +1,13 @@
 $(document).ready((function(){
 
+  $(document.body).on('touchmove', onScroll); // for mobile
+  $(window).on('scroll', onScroll);
+
   AOS.init();
 
-  setTimeout(() => {
-    $("body").css("overflow", "auto");
-  }, 2000);
+    // setTimeout(() => {
+    //   $("body").css("overflow", "auto");
+    // }, 2000);
 
     $('.opener-logo').animate({
         opacity: 1,
@@ -39,14 +42,25 @@ $(document).ready((function(){
         
     });
 
-    $(window).scroll(function (event) {
+    $('.contactus').on('click', function () {
+
+      $('.imaginary-header').fadeOut();
+      $('.logo-container').removeClass('opacity-0');
+      $('.nav-content').fadeOut();
+      $('.header').animate({
+          left:"0",
+      }, 300);
+      
+  });
+
+    function onScroll() {
       var scroll = $(window).scrollTop();
       if(scroll > 0){
         $('.see-our-work').fadeOut(200);
       } else{
         $('.see-our-work').fadeIn(200);
       }
-    });
+    };
 
     var autoscroll1 = true;
     var autoscroll2 = true;
@@ -61,81 +75,85 @@ $(document).ready((function(){
 
     if($('#root > div').hasClass("homepage")){
     
-    $(window).scroll(function (event) {
-      var scroll = $(window).scrollTop();
-      if(scroll > 0 && autoscroll1){
-        $('html, body').animate({
-        scrollTop: $(window).height()
-      }, 1000);
-      autoscroll1 = false;
+    if($(window).width() > 990){
+      $(window).scroll(function (event) {
+        var scroll_y_offset = 20;
+        
+        var scroll = $(window).scrollTop();
+        if(scroll > 0 && autoscroll1){
+          $('html, body').animate({
+          scrollTop: $(window).height()
+        }, 1000);
+        autoscroll1 = false;
+        }
+        if(scroll > $(window).height() + scroll_y_offset && autoscroll2){
+          $('html, body').animate({
+          scrollTop: $(window).height()*2
+        }, 1000);
+         autoscroll2 = false;
+        }
+        if(scroll > ($(window).height()*2 + scroll_y_offset) && autoscroll3){
+          $('html, body').animate({
+          scrollTop: $(window).height()*3
+        }, 1000);
+         autoscroll3 = false;
+        }
+        if(scroll > ($(window).height()*3 + scroll_y_offset) && autoscroll4){
+          $('html, body').animate({
+          scrollTop: $(window).height()*4
+        }, 1000);
+         autoscroll4 = false;
+        }
+        if(scroll > ($(window).height()*4 + scroll_y_offset) && autoscroll5){
+          $('html, body').animate({
+          scrollTop: $(window).height()*5
+        }, 1000);
+         autoscroll5 = false;
+        }
+        if(scroll > ($(window).height()*5 + scroll_y_offset) && autoscroll6 && $('#root > div').hasClass("approach_page")){
+          $('html, body').animate({
+          scrollTop: $(window).height()*6
+        }, 1000);
+         autoscroll6 = false;
+        }
+        if(scroll > ($(window).height()*6 + scroll_y_offset) && autoscroll7 && $('#root > div').hasClass("approach_page")){
+          $('html, body').animate({
+          scrollTop: $(window).height()*7
+        }, 1000);
+         autoscroll7 = false;
+        }
+        if(scroll > ($(window).height()*7 + scroll_y_offset) && autoscroll8 && $('#root > div').hasClass("approach_page")){
+          $('html, body').animate({
+          scrollTop: $(window).height()*8
+        }, 1000);
+         autoscroll8 = false;
+        }
+        if(scroll > ($(window).height()*8 + scroll_y_offset) && autoscroll9 && $('#root > div').hasClass("approach_page")){
+          $('html, body').animate({
+          scrollTop: $(window).height()*9
+        }, 1000);
+         autoscroll9 = false;
+        }
+        if(scroll > ($(window).height()*9 + scroll_y_offset) && autoscroll10 && $('#root > div').hasClass("approach_page")){
+          $('html, body').animate({
+          scrollTop: $(window).height()*10
+        }, 1000);
+         autoscroll10 = false;
+        }
+        if(scroll == 0){
+          autoscroll1 = true;
+          autoscroll2 = true;
+          autoscroll3 = true;
+          autoscroll4 = true;
+          autoscroll5 = true;
+          autoscroll6 = true;
+          autoscroll7 = true;
+          autoscroll8 = true;
+          autoscroll9 = true;
+          autoscroll10 = true;
+        }
+      });
       }
-      if(scroll > $(window).height() + 20 && autoscroll2){
-        $('html, body').animate({
-        scrollTop: $(window).height()*2
-      }, 1000);
-       autoscroll2 = false;
-      }
-      if(scroll > ($(window).height()*2 + 20) && autoscroll3){
-        $('html, body').animate({
-        scrollTop: $(window).height()*3
-      }, 1000);
-       autoscroll3 = false;
-      }
-      if(scroll > ($(window).height()*3 + 20) && autoscroll4){
-        $('html, body').animate({
-        scrollTop: $(window).height()*4
-      }, 1000);
-       autoscroll4 = false;
-      }
-      if(scroll > ($(window).height()*4 + 20) && autoscroll5 && $('#root > div').hasClass("approach_page")){
-        $('html, body').animate({
-        scrollTop: $(window).height()*5
-      }, 1000);
-       autoscroll5 = false;
-      }
-      if(scroll > ($(window).height()*5 + 20) && autoscroll6 && $('#root > div').hasClass("approach_page")){
-        $('html, body').animate({
-        scrollTop: $(window).height()*6
-      }, 1000);
-       autoscroll6 = false;
-      }
-      if(scroll > ($(window).height()*6 + 20) && autoscroll7 && $('#root > div').hasClass("approach_page")){
-        $('html, body').animate({
-        scrollTop: $(window).height()*7
-      }, 1000);
-       autoscroll7 = false;
-      }
-      if(scroll > ($(window).height()*7 + 20) && autoscroll8 && $('#root > div').hasClass("approach_page")){
-        $('html, body').animate({
-        scrollTop: $(window).height()*8
-      }, 1000);
-       autoscroll8 = false;
-      }
-      if(scroll > ($(window).height()*8 + 20) && autoscroll9 && $('#root > div').hasClass("approach_page")){
-        $('html, body').animate({
-        scrollTop: $(window).height()*9
-      }, 1000);
-       autoscroll9 = false;
-      }
-      if(scroll > ($(window).height()*9 + 20) && autoscroll10 && $('#root > div').hasClass("approach_page")){
-        $('html, body').animate({
-        scrollTop: $(window).height()*10
-      }, 1000);
-       autoscroll10 = false;
-      }
-      if(scroll == 0){
-        autoscroll1 = true;
-        autoscroll2 = true;
-        autoscroll3 = true;
-        autoscroll4 = true;
-        autoscroll5 = true;
-        autoscroll6 = true;
-        autoscroll7 = true;
-        autoscroll8 = true;
-        autoscroll9 = true;
-        autoscroll10 = true;
-      }
-    });
     }
 
     $('#contact').on('click', function () {
@@ -156,54 +174,53 @@ $(document).ready((function(){
   });
 
     $('#work').hover(function() {
-        $('.bg-work').fadeIn();
+        $('.header-work').fadeIn();
         $('.nw').addClass('opacity-50');
       }, function() {
-        $('.bg-work').fadeOut();
+        $('.header-work').fadeOut();
         $('.nw').removeClass('opacity-50');
     });
 
     $('#services').hover(function() {
-        $('.bg-services').fadeIn();
+        $('.header-services').fadeIn();
         $('.ns').addClass('opacity-50');
       }, function() {
-        $('.bg-services').fadeOut();
+        $('.header-services').fadeOut();
         $('.ns').removeClass('opacity-50');
 
     });
 
     $('#approach').hover(function() {
-        $('.bg-approach').fadeIn();
+        $('.header-approach').fadeIn();
         $('.na').addClass('opacity-50');
       }, function() {
-        $('.bg-approach').fadeOut();
+        $('.header-approach').fadeOut();
         $('.na').removeClass('opacity-50');
 
     });
 
     $('#about').hover(function() {
-        $('.bg-about').fadeIn();
-        // $('.bg-about').animate({
-        //   opacity: 1,
-        // }, 500);
+        $('.header-contact').fadeIn();
         $('.nt').addClass('opacity-50');
       }, function() {
-        $('.bg-about').fadeOut();
-        // $('.bg-about').animate({
-        //   opacity: 0,
-        // }, 500);
+        $('.header-contact').fadeOut();
         $('.nt').removeClass('opacity-50');
     });
 
     $('#work1').hover(function() {
-        $('.bg-about').fadeIn();
+        $('.bg-service-data').fadeIn();
       }, function() {
-        $('.bg-about').fadeOut();
+        $('.bg-service-data').fadeOut();
     });
+
+    $('#work2').hover(function() {
+      $('.bg-service-ui').fadeIn();
+    }, function() {
+      $('.bg-service-ui').fadeOut();
+  });
 
 
     $(window).scroll(function() {
-      console.log($(window).height());
       var scroll_height = $("body").prop("scrollHeight") - $(window).height();
       var scrollbar_offset = ($(window).scrollTop()/scroll_height)*($(window).height());
         $(".scrollbar").css({

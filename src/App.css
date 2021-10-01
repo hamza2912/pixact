@@ -67,9 +67,9 @@
 
 /* Pixact CSS */
 
-body{
+/* body{
   overflow: hidden;
-}
+} */
 
 .pixact-label{
   transform: rotate(90deg);
@@ -84,24 +84,44 @@ body{
 }
 
 .bg-work{
-  background: url("./background/work.jpg") no-repeat center center; 
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+  url("./background/work.jpg") no-repeat center; 
 }
 
 .bg-services{
-  background: url("./background/services.jpg") no-repeat center center; 
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+  url("./background/services.jpg") no-repeat center; 
 }
 
 .bg-approach{
-  background: url("./background/home-approach2.jpg") no-repeat center fixed; 
-}
-
-.bg-about{
-  background: url("./background/about.jpg") no-repeat center center; 
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+  url("./background/approach.jpg") no-repeat center fixed; 
 }
 
 .bg-contact{
-  background: url("./background/bg-contact.jpg") no-repeat center fixed; 
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+  url("./background/contact.jpg") no-repeat center fixed; 
 }
+
+.bg-service-ui{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
+  url("./background/ui-design.jpg") no-repeat center; 
+}
+
+/* .bg-service-dev{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
+  url("./background/development.jpg") no-repeat center; 
+} */
+
+.bg-service-data{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+  url("./background/data.jpg") no-repeat center; 
+}
+
+/* .bg-service-digi{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
+  url("./background/digi.jpg") no-repeat center; 
+} */
 
 .text-gray{
   color: #636363;
@@ -110,6 +130,10 @@ body{
 .btn:hover{
   width: 9.5rem;
   transition: all 0.3s;
+}
+
+.z-minus{
+  z-index: -1;
 }
 
 .see-work-scroll{
@@ -123,13 +147,14 @@ body{
 
 @keyframes topToBottom {
   from {top: 0;}
-  to {top: 100%;}
+  to {top: 70%;}
 }
 
 
 @media screen and (max-width:990px) {
-  .h-product{
-    height: 20rem;
+
+  body{
+    overflow-x: hidden;
   }
 
 }
