@@ -136,8 +136,19 @@
   z-index: -1;
 }
 
+.services-options{
+  transition: all 0.5s;
+}
+
+.float-around-box{
+  animation: topToBottom linear 3s infinite alternate;
+  -webkit-animation: topToBottom linear 3s infinite alternate;
+  -moz-animation: topToBottom linear 3s infinite alternate;
+  -o-animation: topToBottom linear 3s infinite alternate;
+  -ms-animation: topToBottom linear 3s infinite alternate;
+}
+
 .see-work-scroll{
-  /* transition: all 3s; */
   animation: topToBottom linear 3s infinite alternate;
   -webkit-animation: topToBottom linear 3s infinite alternate;
   -moz-animation: topToBottom linear 3s infinite alternate;
@@ -150,6 +161,11 @@
   to {top: 70%;}
 }
 
+@keyframes aroundBox {
+  from {left: -33%;}
+  to {left: 100%;}
+}
+
 
 @media screen and (max-width:990px) {
 
@@ -157,18 +173,4 @@
     overflow-x: hidden;
   }
 
-}
-
-
-
-
-.shades::before{
-  content: "";
-  position: absolute;
-  background-color: #111827;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  top: 2px;
-  left: -2px;
 }

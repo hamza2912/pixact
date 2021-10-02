@@ -2,7 +2,7 @@ import React from "react";
 
 function Btn_primary(props) {
 
-    var btn_class = 'w-32 bg-white rounded-3xl text-black p-2 font-semibold text-center btn cursor-pointer ' + props.className;
+    var btn_class = 'lg:w-32 w-24 bg-white rounded-3xl text-black lg:text-base text-xs p-2 font-semibold text-center btn cursor-pointer ' + props.className;
     
     return (
     

@@ -1,6 +1,15 @@
 import React from "react";
+import { useHistory } from 'react-router-dom';
 
 function Header() {
+
+    // // let history = useHistory();
+
+    // // function backToHome() {
+    // //   history.push("");
+    
+    // // }
+
     return (
         
         <div className=''>
@@ -36,13 +45,13 @@ function Header() {
                 <a id='work' className='hover:text-white ns na nt' href="/works">
                   <h1 className='lg:text-6xl text-4xl font-semibold'>Work</h1>
                 </a>
-                <a id='services' className='hover:text-white nw na nt contactus' href="/#servicePage">
+                <a id='services' className='hover:text-white nw na nt' href="/services">
                   <h1 className='lg:text-6xl text-4xl font-semibold'>Services</h1>
                 </a>
                 <a id='approach' className='hover:text-white nw ns nt' href="/approach">
                   <h1 className='lg:text-6xl text-4xl font-semibold'>Approach</h1>
                 </a>
-                <a id='about' className='hover:text-white nw ns na contactus' href="/#contactus">
+                <a id='about' className='hover:text-white nw ns na' href="/contact">
                   <h1 className='lg:text-6xl text-4xl font-semibold'>Contact</h1>
                 </a>
               </div>
