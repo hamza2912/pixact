@@ -22,7 +22,7 @@ function Approach() {
                     <p data-aos='fade-up' data-aos-delay='200'>We help forward-thinking brands launch products and design new customer experiences in digital and beyond.</p>
                     <p data-aos='fade-up' data-aos-delay='250'>Everything here is in-house and end-to-end, from strategy to creative, UX, tech, and QA. 
                     </p>
-                    <p data-aos='fade-up' data-aos-delay='300'>We don’t make "ads". Our work instead focuses on cutting-edge experience design to help brands achieve more meaningful engagement with consumers</p>
+                    <p data-aos='fade-up' data-aos-delay='300'>Our work focuses on cutting-edge experience design to help brands achieve more meaningful engagement with consumers</p>
                     <p data-aos='fade-up' data-aos-delay='350'>These integrated capabilities allow us to push the limits of creativity and technology while grounding us in what is most relevant to audiences.</p>
               </div>
             </div>
@@ -32,13 +32,13 @@ function Approach() {
           <div className='home-content lg:pl-24 pl-12 w-full h-full flex items-center'>
             <div className='w-full lg:px-40 px-5 flex flex-col text-white'>
               <p className='text-sm mb-4 uppercase'>Our Approach</p>
-              <h1 data-aos='fade-right' className='lg:text-6xl text-3xl font-semibold'>A process that's both<br /><span className='text-red-600'>rigorous and flexible.</span></h1>
+              <h1 data-aos='fade-right' className='lg:text-6xl text-2xl font-semibold'>A process that's both<br /><span className='text-red-600'>rigorous and flexible.</span></h1>
               <div className='w-full flex lg:flex-row flex-col lg:mt-12 mt-6'>
                 <div className='lg:w-1/2 w-full pr-10'>
                   <img className='w-full h-auto' src="images/approach/flexible.png" alt="" />
                 </div>
                 <div className='lg:w-1/2 w-full mt-5 lg:mt-0'>
-                  <p data-aos='fade-up' data-aos-delay='100' className='text-base text-white'>Every client is unique. Some need end-to-end solutions, while others look for our expertise in a specific creative technology. We are collaborators in the truest sense and have made our process flexible to meet your workflow. We’ve been innovating in digital for 15+ years and have seen every type of challenge. Our process is always evolving to reduce risk. We maintain the highest level of rigor internally and center our process on transparency and collaboration.</p>
+                  <p data-aos='fade-up' data-aos-delay='100' className='lg:text-base text-sm text-white'>Every client is unique. Some need end-to-end solutions, while others look for our expertise in a specific creative technology. We are collaborators in the truest sense and have made our process flexible to meet your workflow. We’ve been innovating in digital for 15+ years and have seen every type of challenge. Our process is always evolving to reduce risk. We maintain the highest level of rigor internally and center our process on transparency and collaboration.</p>
                 </div>
               </div>
             </div>

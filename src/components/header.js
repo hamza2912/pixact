@@ -14,7 +14,7 @@ function Header() {
         
         <div className=''>
 
-          <header className='header lg:w-24 w-12 h-full fixed top-0 left-0 bg-transparent border-r lg:px-5 px-0 py-10 z-10'>
+          <header className='header lg:w-24 w-12 h-full fixed top-0 left-0 bg-transparent border-r lg:px-5 px-0 py-10 z-20'>
               <div className='flex flex-col h-full items-center justify-between text-white'>
                 <div className='logo-container w-4/5'>
                   <a href="/">
@@ -30,12 +30,13 @@ function Header() {
               <div className='scrollbar absolute top-0 right-0 h-16 w-px bg-white'></div>
           </header>
           {/* imaginary header */}
-          <header className='imaginary-header w-24 h-full fixed top-0 left-0 bg-transparent px-5 py-10 z-50 hidden'>
-              <div className='flex flex-col h-full items-center justify-between text-white'>
-                <div className='imaginary-logo-container flex flex-row items-center cursor-pointer'>
-                  <img className='w-4/5 h-auto' src="images/logo/pixact-logo.png" alt="Pixact Logo Mini" />
+          <header className='imaginary-header w-full h-auto fixed top-0 left-0 bg-transparent px-5 py-10 z-30 hidden'>
+              <div className='flex flex-row h-auto items-center justify-between text-white'>
+                <div className='w-24 px-5 imaginary-logo-container flex flex-row items-center cursor-pointer'>
+                  <img className='lg:w-4/5 w-3/5 h-auto' src="images/logo/pixact-logo.png" alt="Pixact Logo Mini" />
                   <p className='font-medium text-lg'>Pixact</p>
                 </div>
+                <i class="fas fa-angle-left pr-5 cursor-pointer imaginary-logo-container" ></i>
               </div>
           </header>
 
