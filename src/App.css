@@ -67,9 +67,9 @@
 
 /* Pixact CSS */
 
-/* body{
-  overflow: hidden;
-} */
+body{
+  overflow-x: hidden;
+}
 
 .pixact-label{
   transform: rotate(90deg);
@@ -81,6 +81,16 @@
   -o-background-size: cover !important;
   background-size: cover !important;
   z-index: 0;
+}
+
+.bg-blog{
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  z-index: 0;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .bg-work{
@@ -132,6 +142,15 @@
   transition: all 0.3s;
 }
 
+.bg-blue{
+  /* background-color: #12141d; */
+  background-color: rgb(12, 14, 22);
+}
+
+.border-blue{
+  border-color: rgb(12, 14, 22);
+}
+
 .z-minus{
   z-index: -1;
 }
@@ -155,6 +174,14 @@
 
 .z-15{
   z-index: 15;
+}
+
+.text-fb{
+  color: #1773ea;
+}
+
+.text-insta{
+  color: #ec882a;
 }
 
 .float-around-box{

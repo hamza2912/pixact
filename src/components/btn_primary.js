@@ -6,7 +6,7 @@ function Btn_primary(props) {
     
     return (
     
-        <a id={props.id} className={btn_class} href={props.url}>{props.name} <i className="btn-primary fas fa-angle-right text-black hidden"></i></a>
+        <a id={props.id} className={btn_class} href={props.url} target="_blank">{props.name} <i className="btn-primary fas fa-angle-right text-black hidden"></i></a>
 
     );
 }

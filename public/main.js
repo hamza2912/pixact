@@ -118,11 +118,10 @@ $(document).ready((function(){
 
 
 
-
   // Button jquery start
-  $('.btn').hover(function() {
+  $('.btn').hover(function(event) {
       $('.btn-primary').fadeIn();
-  }, function() {
+  }, function(event) {
       $('.btn-primary').hide();
   });
   // Button jquery start
@@ -161,6 +160,7 @@ $(document).ready((function(){
     var autoscroll8 = true;
     var autoscroll9 = true;
     var autoscroll10 = true;
+    var autoscroll11 = true;
 
   
     function onScroll() {
@@ -241,6 +241,12 @@ $(document).ready((function(){
             }, 1000);
             autoscroll10 = false;
           }
+          if(scroll > ($(window).height()*10 + scroll_y_offset) && autoscroll11 && $('#root > div').hasClass("approach_page")){
+            $('html, body').animate({
+            scrollTop: $(window).height()*11
+            }, 1000);
+            autoscroll11 = false;
+          }
           if(scroll == 0){
             autoscroll1 = true;
             autoscroll2 = true;
@@ -252,6 +258,7 @@ $(document).ready((function(){
             autoscroll8 = true;
             autoscroll9 = true;
             autoscroll10 = true;
+            autoscroll11 = true;
             $('.see-our-work').fadeIn(200);
           }
         } else {
