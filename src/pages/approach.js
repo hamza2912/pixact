@@ -182,7 +182,15 @@ function Approach() {
               <p data-aos='fade-right' data-aos-delay='100' className='lg:text-2xl text-base lg:mt-16 mt-6'>Whatever your goal, let’s chat about how to get you there.</p>
               <p className='text-xs text-gray-400 mt-10' data-aos='fade-up' data-aos-delay='200'>We offer design and interaction, creative technology, and content and storytelling capabilities in across five continents.</p>
               <div className='w-full flex lg:flex-row flex-col lg:mt-16 mt-6'>
-                <Btn_primary url="https://wa.me/+923052073889" className='mr-10' id='contact' name="Let's Chat" />
+              <div className='lg:w-48 w-32 bg-white rounded-3xl text-black lg:text-base text-xs py-2 font-semibold text-center hover:w-56 transition-all cursor-pointer  text-black flex justify-center'>
+                  <div className='flex flex-row w-fit items-center'>
+                    <p className=''>Let's chat</p>
+                    <div className='h-6 lg:border-l-2 border-l border-black mx-2'></div>
+                    <a className='mr-1 text-xs' href="mailto:pixact.co@gmail.com" target="_blank"><i className="fas fa-envelope lg:text-lg text-base mr-1"></i></a>
+                    <a className='' href="https://wa.me/+923052073889" target="_blank"><i className="fab fa-whatsapp lg:text-lg text-base mr-1"></i></a> 
+                  </div>
+                </div>
+                {/* <Btn_primary url="https://wa.me/+923052073889" className='mr-10' id='contact' name="Let's Chat" /> */}
                 {/* <Btn_primary className='' id='contact' name="Newsletter" /> */}
             </div>
             </div>

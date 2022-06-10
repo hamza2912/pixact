@@ -23,11 +23,11 @@ function Work_content( props ) {
                         <div data-aos='fade-up' data-aos-delay='50' className='flex lg:flex-row flex-col lg:px-48 px-5 text-white relative z-10 items-center work -mt-5 lg:-mt-0'>
                             <div className='lg:w-1/2 w-full lg:h-full h-auto flex flex-col z-10 mb-5 lg:mb-0'>
                                 <p className='lg:text-sm text-xs text-gray uppercase pt-4'>UI UX | Full Stack Development</p>
-                                <h1 className='lg:text-5xl text-2xl font-semibold'>DP Transport</h1>
+                                <h1 className='lg:text-5xl text-2xl font-medium'>DP Transport</h1>
                             </div>
                             <div className='lg:w-1/2 w-full lg:h-full h-auto flex flex-col z-10'>
-                                <p className='lg:text-sm text-xs max-w-md lg:mt-6 mt-0'>A transport buisness company which streamline and strengthen the supply chain of any organization</p>
-                                <p className='lg:text-sm text-xs max-w-md mt-4 text-red-400'>Technologies: Figma, React, HTML5, CSS3, Tailwindcss, Node.js, MongoDB etc.</p>
+                                <p className='lg:text-sm text-xs max-w-md lg:mt-6 mt-0 font-light'>A transport buisness company which streamline and strengthen the supply chain of any organization</p>
+                                <p className='lg:text-sm text-xs max-w-md mt-4 text-blue-100'>Technologies: Figma, React, HTML5, CSS3, Tailwindcss, Node.js, MongoDB etc.</p>
                                 <a href="https://dptransport-portal.web.app/" target="_blank" className='lg:text-sm text-xs text-gray uppercase lg:mt-12 mt-8 cursor-pointer hover:text-gray mb-2'>Visit the Site <i className="fas fa-angle-right text-gray text-xs"></i></a>
                             </div>
                             <div className='w-full h-full absolute top-0 left-0 bg-cover lg:hidden bg-service-data'></div>
@@ -36,11 +36,11 @@ function Work_content( props ) {
                         <div data-aos='fade-up' data-aos-delay='50' className='flex lg:flex-row flex-col lg:px-48 px-5 text-white relative z-10 items-center work mt-5 lg:mt-0'>
                             <div className='lg:w-1/2 w-full lg:h-full h-auto flex flex-col z-10 mb-5 lg:mb-0'>
                                 <p className='lg:text-sm text-xs text-gray uppercase pt-4'>UI UX | Frontend</p>
-                                <h1 className='lg:text-5xl text-2xl font-semibold'>Dora</h1>
+                                <h1 className='lg:text-5xl text-2xl font-medium'>Dora</h1>
                             </div>
                             <div className='lg:w-1/2 w-full lg:h-full h-auto flex flex-col z-10'>
-                                <p className='lg:text-sm text-xs max-w-md lg:mt-6 mt-0'>Dora gives an edge by ensuring clients get a transparent and collaborative experience</p>
-                                <p className='lg:text-sm text-xs max-w-md mt-4 text-red-400'>Technologies: Figma, React, HTML5, CSS3, Tailwindcss, Firebase etc.</p>
+                                <p className='lg:text-sm text-xs max-w-md lg:mt-6 mt-0 font-light'>Dora gives an edge by ensuring clients get a transparent and collaborative experience</p>
+                                <p className='lg:text-sm text-xs max-w-md mt-4 text-blue-100'>Technologies: Figma, React, HTML5, CSS3, Tailwindcss, Firebase etc.</p>
                                 <a href="https://trydora.com/" target="_blank" className='lg:text-sm text-xs text-gray uppercase lg:mt-12 mt-8 cursor-pointer hover:text-gray mb-2'>Visit the Site <i className="fas fa-angle-right text-gray text-xs"></i></a>
                             </div>
                             <div className='w-full h-full absolute top-0 left-0 bg-cover lg:hidden bg-service-ui'></div>
@@ -60,7 +60,7 @@ function Work_content( props ) {
                 <div className='home-content w-full lg:pl-24 pl-12'>
                     <div className='flex lg:flex-row flex-col lg:px-48 px-5 pb-5 lg:h-48 h-auto text-white lg:items-center items-start lg:justify-between'>
                         <div className='lg:w-1/2 w-full flex flex-col z-10'>
-                            <h1 className='lg:text-6xl text-3xl font-semibold'>Projects <br />Highlights</h1>
+                            <h1 className='lg:text-5xl text-3xl font-semibold'>Projects <br />Highlights</h1>
                         </div>
                         <div className='lg:w-1/2 w-full flex flex-col z-10'>
                             <p className='text-sm max-w-md mt-6'>A selection of Creative Technology, Content Storytelling and Design Interaction projects.</p>

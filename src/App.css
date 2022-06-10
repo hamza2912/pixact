@@ -69,6 +69,7 @@
 
 body{
   overflow-x: hidden;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .pixact-label{
@@ -182,6 +183,10 @@ body{
 
 .text-insta{
   color: #ec882a;
+}
+
+.w-fit{
+  width: fit-content;
 }
 
 .float-around-box{
